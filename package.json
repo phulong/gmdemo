@@ -7,6 +7,10 @@
     "start": "node index.js",
     "prod": "PORT=80 node index.js"
   },
+"repository": {
+    "type": "git",
+    "url": "git+https://github.com/phulong/gmdemo.git"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {

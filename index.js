@@ -37,6 +37,6 @@ function resizeImage (source,target,width,height) {
 var server = app.listen(8000 || process.env.PORT, function () {
    var host = server.address().address
    var port = server.address().port
-   
+   console.log ('Connect server ok');
    console.log("App listening at http://%s:%s", host, port)
 })
