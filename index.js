@@ -18,7 +18,7 @@ app.get('/resize/:width/:height', function (req, res) {
 })
 
 app.get ('/', function (req,res){
-	 res.send ('Welcome to KintoBlock');
+	 res.send ('Welcome to Gm demo in KintoBlock ');
 })
 
 app.get ('/env', function (req,res){
@@ -34,7 +34,7 @@ function resizeImage (source,target,width,height) {
 	return true;
 }
 
-var server = app.listen(3000 || process.env.PORT, function () {
+var server = app.listen(8000 || process.env.PORT, function () {
    var host = server.address().address
    var port = server.address().port
    
