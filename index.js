@@ -4,6 +4,7 @@ var fs = require('fs')
   , gm = require('gm').subClass({imageMagick: true});
 require('dotenv').config()
 const IMAGES = './images/';
+const PORT = process.env.PORT || '8000'
 
 app.get('/resize/:width/:height', function (req, res) {
 	let width = req.params.width;
@@ -34,9 +35,12 @@ function resizeImage (source,target,width,height) {
 	return true;
 }
 
-var server = app.listen(8000 || process.env.PORT, function () {
-   var host = server.address().address
-   var port = server.address().port
-   console.log ('Connect server ok');
-   console.log("App listening at http://%s:%s", host, port)
-})
+app.listen(PORT, () => console.log(`App listening on port ${PORT}!`))
+
+
+// var server = app.listen(8000 || process.env.PORT, function () {
+//    var host = server.address().address
+//    var port = server.address().port
+//    console.log ('Connect server ok');
+//    console.log("App listening at http://%s:%s", host, port)
+// })
